@@ -11,7 +11,7 @@ namespace CleverIt\UBL\Invoice;
 use Sabre\Xml\Writer;
 use Sabre\Xml\XmlSerializable;
 
-class AccountingSupplierParty implements XmlSerializable {
+class AccountingCustomerParty implements XmlSerializable {
     private $additionalAccountID;
     private $party;
 
@@ -24,7 +24,7 @@ class AccountingSupplierParty implements XmlSerializable {
 
 	/**
 	 * @param mixed $id
-	 * @return AccountingSupplierParty
+	 * @return AccountingCustomerParty
 	 */
 	public function setAdditionalAccountID($id) {
 		$this->additionalAccountID = $id;
@@ -34,15 +34,15 @@ class AccountingSupplierParty implements XmlSerializable {
     /**
      * @return mixed
      */
-    public function getAccountingSupplierParty() {
+    public function getAccountingCustomerParty() {
         return $this->party;
     }
 
     /**
-     * @param mixed $id
-     * @return AccountingSupplierParty
+     * @param mixed $party
+     * @return AccountingCustomerParty
      */
-    public function setAccountingSupplierParty($party) {
+    public function setAccountingCustomerParty($party) {
         $this->party = $party;
         return $this;
     }

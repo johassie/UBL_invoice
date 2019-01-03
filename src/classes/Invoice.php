@@ -120,7 +120,7 @@ class Invoice implements XmlSerializable{
             $cbc . 'InvoiceTypeCode' => $this->invoiceTypeCode,
             $cac . 'AdditionalDocumentReference' => $this->additionalDocumentReference,
             $cac . 'AccountingSupplierParty' => [$cac . "Party" => $this->accountingSupplierParty],
-            $cac . 'AccountingCustomerParty' => [$cac . "Party" => $this->accountingCustomerParty],
+            $cac . 'AccountingCustomerParty' => $this->accountingCustomerParty,
         ]);
 
         if ($this->allowanceCharges != null) {
