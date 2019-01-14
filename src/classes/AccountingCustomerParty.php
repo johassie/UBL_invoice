@@ -12,22 +12,22 @@ use Sabre\Xml\Writer;
 use Sabre\Xml\XmlSerializable;
 
 class AccountingCustomerParty implements XmlSerializable {
-    private $additionalAccountID;
+    private $supplierAssignedAccountID;
     private $party;
 
 	/**
 	 * @return mixed
 	 */
-	public function getAdditionalAccountID() {
-		return $this->additionalAccountID;
+	public function getSupplierAssignedAccountID() {
+		return $this->supplierAssignedAccountID;
 	}
 
 	/**
 	 * @param mixed $id
 	 * @return AccountingCustomerParty
 	 */
-	public function setAdditionalAccountID($id) {
-		$this->additionalAccountID = $id;
+	public function setSupplierAssignedAccountID($id) {
+		$this->supplierAssignedAccountID = $id;
 		return $this;
 	}
 
@@ -49,7 +49,7 @@ class AccountingCustomerParty implements XmlSerializable {
 
 	function xmlSerialize(Writer $writer) {
 		$writer->write([
-			Schema::CBC.'AdditionalAccountID' => $this->additionalAccountID,
+			Schema::CBC.'SupplierAssignedAccountID' => $this->supplierAssignedAccountID,
             Schema::CAC.'Party' => $this->party
 		]);
 	}
